@@ -6,7 +6,8 @@ const initialState = {
     '/img/sheet_4.jpg',
   ],
   selectedImage: '/img/sheet_1.jpg',
-  companyName: 'セーレン株式会社',
+  companyName: 'Hoge株式会社',
+  textPosition: 0,
 };
 
 const sheetReducer = (state = initialState, action) => {
@@ -20,6 +21,11 @@ const sheetReducer = (state = initialState, action) => {
       return ({
         ...state,
         companyName: action.payload.companyName,
+      });
+    case 'INPUT_TEXT_POSITION':
+      return ({
+        ...state,
+        textPosition: action.payload.textPosition,
       });
     default:
       return state;

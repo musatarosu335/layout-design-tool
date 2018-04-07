@@ -11,3 +11,10 @@ export const inputCompanyName = companyName => ({
     companyName,
   },
 });
+
+export const inputTextPosition = textPosition => ({
+  type: 'INPUT_TEXT_POSITION',
+  payload: {
+    textPosition,
+  },
+});
